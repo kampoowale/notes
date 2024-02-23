@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes/features/add_notes/presentation/widgets/add_notes_alert_dialog.dart';
+import 'package:notes/features/add_notes/presentation/widgets/add_notes_page.dart';
 
 class AddNotes extends StatelessWidget {
   const AddNotes({super.key});
@@ -9,9 +9,7 @@ class AddNotes extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showDialog(context: context, builder: (context){
-            return const AddNotesAlertDialog();
-          });
+          Navigator.pushNamed(context, AddNotesPage.address, arguments: 'Data from home');
         },
       ),
     );
